@@ -1,0 +1,156 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Virtual Trial Room</title>-->
+<!--    <style>-->
+<!--        body {-->
+<!--            font-family: Arial, sans-serif;-->
+<!--            text-align: center;-->
+<!--            background-color: #f0f0f0;-->
+<!--            margin: 0;-->
+<!--            padding: 0;-->
+<!--        }-->
+<!--        #container {-->
+<!--            display: flex;-->
+<!--            flex-direction: column;-->
+<!--            align-items: center;-->
+<!--            padding: 20px;-->
+<!--        }-->
+<!--        #video-container {-->
+<!--            position: relative;-->
+<!--            display: inline-block;-->
+<!--            border: 5px solid #007bff;-->
+<!--            border-radius: 15px;-->
+<!--            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);-->
+<!--            background-color: #fff;-->
+<!--        }-->
+<!--        #video {-->
+<!--            width: 800px;-->
+<!--            height: 600px;-->
+<!--            border-radius: 15px;-->
+<!--        }-->
+<!--        #controls {-->
+<!--            margin-top: 20px;-->
+<!--        }-->
+<!--        button {-->
+<!--            background-color: #007bff;-->
+<!--            color: #fff;-->
+<!--            border: none;-->
+<!--            padding: 10px 20px;-->
+<!--            margin: 5px;-->
+<!--            border-radius: 5px;-->
+<!--            cursor: pointer;-->
+<!--            font-size: 16px;-->
+<!--            transition: background-color 0.3s;-->
+<!--        }-->
+<!--        button:hover {-->
+<!--            background-color: #0056b3;-->
+<!--        }-->
+<!--        h1 {-->
+<!--            color: #333;-->
+<!--            margin-bottom: 20px;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <div id="container">-->
+<!--        <h1>Virtual Trial Room</h1>-->
+<!--        <div id="video-container">-->
+<!--            <img id="video" src="{{ url_for('video_feed') }}" alt="Video Feed">-->
+<!--        </div>-->
+<!--        <div id="controls">-->
+<!--            <button onclick="location.href='{{ url_for('prev_shirt') }}'">Previous Shirt</button>-->
+<!--            <button onclick="location.href='{{ url_for('next_shirt') }}'">Next Shirt</button>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walmart Virtual Trial Room</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        #header {
+            background-color: #0071ce;
+            color: white;
+            padding: 15px;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #header img {
+            height: 40px;
+            margin-right: 15px;
+        }
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        #video-container {
+            position: relative;
+            display: inline-block;
+            border: 5px solid #007bff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            background-color: #fff;
+        }
+        #video {
+            width: 800px;
+            height: 600px;
+            border-radius: 15px;
+        }
+        #controls {
+            margin-top: 20px;
+        }
+        button {
+            background-color: #0071ce;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Walmart_logo.svg/800px-Walmart_logo.svg.png" alt="Walmart Logo">
+        Walmart Virtual Trial Room
+    </div>
+    <div id="container">
+        <div id="video-container">
+            <img id="video" src="{{ url_for('video_feed') }}" alt="Video Feed">
+        </div>
+        <div id="controls">
+            <button onclick="location.href='{{ url_for('prev_shirt') }}'">Previous Shirt</button>
+            <button onclick="location.href='{{ url_for('next_shirt') }}'">Next Shirt</button>
+        </div>
+    </div>
+</body>
+</html>
+
