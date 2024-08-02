@@ -1,7 +1,2 @@
 Flask
 Gunicorn
-Response
-cv2
-os
-cvzone
-PoseDetector
