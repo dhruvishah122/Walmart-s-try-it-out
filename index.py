@@ -327,12 +327,12 @@ app = Flask(__name__)
 cap = cv2.VideoCapture(0)
 detector = PoseDetector()
 
-shirtsFolderPath = "C:/Users/dhruv/PycharmProjects/Walmart's virtual trial room/Resources/Shirts"
+shirtsFolderPath = "/Resources/Shirts"
 listShirts = os.listdir(shirtsFolderPath)
 print("Available shirts:", listShirts)
 
 imageNumber = 0
-imgButtonRight = cv2.imread("C:/Users/dhruv/PycharmProjects/Walmart's virtual trial room/Resources/button.png", cv2.IMREAD_UNCHANGED)
+imgButtonRight = cv2.imread("/Resources/button.png", cv2.IMREAD_UNCHANGED)
 imgButtonLeft = cv2.flip(imgButtonRight, 1)
 counterRight = 0
 counterLeft = 0
