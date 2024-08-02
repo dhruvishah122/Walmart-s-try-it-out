@@ -1,7 +1,6 @@
 Flask
 Gunicorn
 Response
-render_template
 cv2
 os
 cvzone
