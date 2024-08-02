@@ -485,8 +485,8 @@ def next_shirt():
         imageNumber += 1
     return '', 204
 
-if __name__ == '__main__':
-    app.run(debug=True, use_reloader=False)
+# if __name__ == '__main__':
+#     app.run(debug=True, use_reloader=False)
 # from flask import Flask, Response, render_template
 # import cv2
 # import os
