@@ -1,2 +1,11 @@
 Flask
 gunicorn
+python-opencv
+jinja2
+cvzone
+cv2
+mediapipe
+numpy
+render-python
+time
+Response
