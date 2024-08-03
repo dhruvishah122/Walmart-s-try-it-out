@@ -6,13 +6,8 @@
       "use": "@vercel/python"
     }
   ],
-  "build": {
-    "env": {
-      "RUSTUP_HOME": "/tmp/.cargo",
-      "CARGO_HOME": "/tmp/.cargo",
-      "PATH": "/tmp/.cargo/bin:$PATH"
-    },
-    "cmd": "curl https://sh.rustup.rs -sSf | sh -s -- -y && source $HOME/.cargo/env && vercel build"
-  }
+  "routes": [
+    {"src": "/(.*)", "dest": "index.py"}
+  ]
 }
 
