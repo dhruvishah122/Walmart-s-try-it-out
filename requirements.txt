@@ -1,6 +1,6 @@
 Flask
 gunicorn
-python-opencv
+opencv-python
 jinja2
 cvzone
 cv2
