@@ -1,16 +1,18 @@
 {
-    "version":2,
-    "builds": [
-        {
-            "src":"./index.py",
-            "use": "@vercel/python",
-            "config":{"runtime":"python3.10"}
-        }
-    ],
-    "routes": [
-        {
-            "src":"/(.*)",
-            "dest":"/"
-        }
-    ]
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "build": {
+    "env": {
+      "RUSTUP_HOME": "/tmp/.cargo",
+      "CARGO_HOME": "/tmp/.cargo",
+      "PATH": "/tmp/.cargo/bin:$PATH"
+    },
+    "cmd": "curl https://sh.rustup.rs -sSf | sh -s -- -y && source $HOME/.cargo/env && vercel build"
+  }
 }
+
