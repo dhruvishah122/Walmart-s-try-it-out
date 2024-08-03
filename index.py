@@ -484,7 +484,7 @@ def next_shirt():
     if imageNumber < len(listShirts) - 1:
         imageNumber += 1
     return '', 204
-
+app.run()
 # if __name__ == '__main__':
 #     app.run(debug=True, use_reloader=False)
 # from flask import Flask, Response, render_template
